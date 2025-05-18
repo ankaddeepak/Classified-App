@@ -17,7 +17,7 @@ const port = 3003
 app.use(express.json())
 configureDB()
 
-// users
+// users routes
 app.post('/register',checkSchema(userRegisterValidationSchema), userCtlr.register)
 app.post('/login', checkSchema(userLoginValidationSchema), userCtlr.login)
 app.put('/update-user/:id', checkSchema(idValidationSchema), checkSchema(idValidationSchema), userCtlr.update)
